@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Читай, страна!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header__brand">
+      <img src="assets/logo.png" alt="Логотип" class="header__logo" />
+      <h1 class="header__title">Читай, страна!</h1>
+    </div>
+    <div class="header__controls">
+      <input type="text" id="searchInput" placeholder="Поиск книги..." />
+      <select id="sortSelect">
+        <option value="">Сортировка</option>
+        <option value="title">По названию</option>
+        <option value="author">По автору</option>
+        <option value="year">По году</option>
+      </select>
+    </div>
+  </header>
+
+  <section class="carousel-container">
+    <div class="carousel-track"></div>
+    <button class="carousel-btn prev">‹</button>
+    <button class="carousel-btn next">›</button>
+  </section>
+
+  <main>
+    <section id="booksContainer" class="books-grid"></section>
+  </main>
+
+  <div id="modal" class="modal">
+    <div class="modal__content">
+      <span id="modalClose" class="modal__close">&times;</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
